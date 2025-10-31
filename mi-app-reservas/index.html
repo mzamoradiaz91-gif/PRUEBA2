@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D FLORENS & COLORS - Reserva de Citas</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF007F">
+</head>
+<body>
+    <div class="container">
+        <div id="page1" class="page active">
+            <div class="logo-container">
+                <img src="images/logo-app.png" alt="Logo de D FLORENS & COLORS" class="app-logo-image">
+                <h2>Gracias por su preferencia</h2>
+            </div>
+            
+            <form id="personal-data-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido-paterno">Apellido paterno:</label>
+                    <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido-materno">Apellido materno:</label>
+                    <input type="text" id="apellido-materno" name="apellido-materno" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label>Género:</label>
+                    <div class="gender-selector">
+                        <div class="gender-option" data-value="hombre" role="button" tabindex="0">
+                            <span>Hombre</span>
+                        </div>
+                        <div class="gender-option" data-value="mujer" role="button" tabindex="0">
+                            <span>Mujer</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="genero" name="genero" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="colonia">Colonia:</label>
+                    <input type="text" id="colonia" name="colonia" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="codigo-postal">Código postal:</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id-cliente">ID Cliente:</label>
+                    <input type="text" id="id-cliente" name="id-cliente" readonly>
+                </div>
+                
+                <button type="button" id="btn-next-1" class="btn">Siguiente</button>
+                
+                <div class="terms">
+                    <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+                    <p><a href="#" id="show-terms">Términos y Condiciones</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div id="page2" class="page">
+            <h2>Servicios para Hombres</h2>
+            
+            <div class="service-instruction">
+                <p>Seleccione Servicio</p>
+            </div>
+            
+            <div class="service-card" data-price="170" role="button" tabindex="0">
+                <img class="service-image" src="images/corte-hombre.jpg" alt="Corte de cabello hombre">
+                <h3>Corte de cabello hombre</h3>
+                <p class="service-price">$170</p>
+            </div>
+            
+            <div class="service-card" data-price="100" role="button" tabindex="0">
+                <img class="service-image" src="images/corte-nino.jpg" alt="Corte de niño">
+                <h3>Corte de niño</h3>
+                <p class="service-price">$100</p>
+            </div>
+            
+            <div class="service-card" data-price="150" role="button" tabindex="0">
+                <img class="service-image" src="images/depilacion-ceja.jpg" alt="Depilación y diseño de ceja">
+                <h3>Depilación y diseño de ceja</h3>
+                <p class="service-price">$150</p>
+            </div>
+            
+            <div class="service-card" data-price="300" role="button" tabindex="0">
+                <img class="service-image" src="images/corte-barba.jpg" alt="Corte de cabello más barba">
+                <h3>Corte de cabello más barba</h3>
+                <p class="service-price">$300</p>
+            </div>
+            
+            <div class="service-card" data-price="100" role="button" tabindex="0">
+                <img class="service-image" src="images/solo-barba.jpg" alt="Solo barba">
+                <h3>Solo barba</h3>
+                <p class="service-price">$100</p>
+            </div>
+            
+            <button type="button" id="btn-next-2" class="btn" disabled>Siguiente</button>
+            <button type="button" id="btn-back-2" class="btn btn-secondary">Atrás</button>
+            
+            <div class="terms">
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <div id="page3" class="page">
+            <h2>Servicios para Mujeres</h2>
+            
+            <div class="form-group">
+                <label for="tipo-cabello">Tipo de cabello: <span style="color: red;">*</span></label>
+                <select id="tipo-cabello" name="tipo-cabello" required>
+                    <option value="">Seleccione tipo de cabello</option>
+                    <option value="corto">Corto</option>
+                    <option value="mediano">Mediano</option>
+                    <option value="largo">Largo</option>
+                </select>
+            </div>
+            
+            <div class="service-card" data-price="500" role="button" tabindex="0">
+                <img class="service-image" src="images/colorimetria.jpg" alt="Colorimetría">
+                <h3>Colorimetría</h3>
+                <p class="service-price">$500 - $2,500 M.N</p>
+            </div>
+            
+            <div class="service-card" data-price="248.33" role="button" tabindex="0">
+                <img class="service-image" src="images/corte-hidratacion.jpg" alt="Corte de cabello con hidratación">
+                <h3>Corte de cabello con hidratación</h3>
+                <p class="service-price">$248.33</p>
+            </div>
+            
+            <div class="service-card" data-price="300" role="button" tabindex="0">
+                <img class="service-image" src="images/planchado-ceja.jpg" alt="Plancha de ceja con depilación facial">
+                <h3>Plancha de ceja con depilación facial</h3>
+                <p class="service-price">$300</p>
+            </div>
+            
+            <div class="service-card" data-price="408.33" role="button" tabindex="0">
+                <img class="service-image" src="images/tinte-sellador.jpg" alt="Tinte con sellador de color en cabello corto">
+                <h3>Tinte con sellador de color en cabello corto</h3>
+                <p class="service-price">$408.33</p>
+            </div>
+            
+            <div class="service-card" data-price="919.67" role="button" tabindex="0">
+                <img class="service-image" src="images/efecto-color.jpg" alt="Efecto de color">
+                <h3>Efecto de color</h3>
+                <p class="service-price">$919.67</p>
+            </div>
+            
+            <div class="service-card" data-price="1166.67" role="button" tabindex="0">
+                <img class="service-image" src="images/alaciado-corto.jpg" alt="Alaciados en cabello corto">
+                <h3>Alaciados en cabello corto</h3>
+                <p class="service-price">$1,166.67</p>
+            </div>
+            
+            <div class="service-card" data-price="416.67" role="button" tabindex="0">
+                <img class="service-image" src="images/unas.jpg" alt="Uñas">
+                <h3>Uñas</h3>
+                <p class="service-price">$416.67</p>
+            </div>
+            
+            <button type="button" id="btn-next-3" class="btn" disabled>Siguiente</button>
+            <button type="button" id="btn-back-3" class="btn btn-secondary">Atrás</button>
+            
+            <div class="terms">
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <div id="page4" class="page">
+            <h2>Selecciona fecha y hora</h2>
+            
+            <div class="form-group">
+                <label for="fecha-cita">Fecha:</label>
+                <input type="date" id="fecha-cita" name="fecha-cita" min="" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Horario disponible (10:00 AM - 8:00 PM):</label>
+                <div class="time-slots" id="time-slots">
+                    </div>
+            </div>
+            
+            <button type="button" id="btn-next-4" class="btn" disabled>Siguiente</button>
+            <button type="button" id="btn-back-4" class="btn btn-secondary">Atrás</button>
+            
+            <div class="terms">
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <div id="page5" class="page">
+            <h2>Resumen de tu reserva</h2>
+            
+            <div id="resumen-datos">
+                </div>
+            
+            <div class="discount-section" id="discount-section">
+                <h3>¿Tienes un código de descuento?</h3>
+                <p>Si llegaste por medio de redes sociales (Facebook u otra plataforma digital), ingresa tu código para obtener un 40% de descuento.</p>
+                <p><strong>Válido hasta: Jueves 6 de Enero</strong></p>
+                
+                <div class="form-group">
+                    <label for="codigo-descuento">Código de descuento:</label>
+                    <input type="text" id="codigo-descuento" name="codigo-descuento" placeholder="Ingresa tu código">
+                </div>
+                
+                <button type="button" id="btn-aplicar-descuento" class="btn">Aplicar descuento</button>
+            </div>
+            
+            <div class="payment-info">
+                <h3>Información de pago</h3>
+                <p>Para confirmar tu cita, necesitas realizar un pago equivalente a <strong id="monto-30"></strong> del servicio seleccionado.</p>
+                
+                <div id="detalle-pago">
+                    </div>
+                
+                <h4>Datos bancarios:</h4>
+                <p><strong>Banco:</strong> BBVA</p>
+                <p><strong>Cuenta interbancaria:</strong> 012180015033585660</p>
+                <p><strong>Número de tarjeta:</strong> 4152314522365629</p>
+                <p><em>Nota: Los pagos con tarjeta de crédito o débito deben realizarse directamente en la sucursal.</em></p>
+            </div>
+            
+            <button type="button" id="btn-confirmar-pago" class="btn btn-success">Confirmar y enviar datos</button>
+            <button type="button" id="btn-back-5" class="btn btn-secondary">Atrás</button>
+            
+            <div class="terms">
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <div id="page6" class="page">
+            <h2>¡Reserva confirmada!</h2>
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 48px; color: var(--success-color);">✓</div>
+                <p>Tu cita ha sido agendada exitosamente.</p>
+            </div>
+            
+            <div id="resumen-final">
+                </div>
+            
+            <div class="payment-info">
+                <h3>Envía tu comprobante de pago</h3>
+                <p>Por favor, envía el comprobante de tu pago a través de WhatsApp para completar tu reserva.</p>
+                
+                <button type="button" id="btn-whatsapp" class="btn whatsapp-btn">
+                    <span>Enviar comprobante por WhatsApp</span>
+                </button>
+                
+                <p style="margin-top: 10px; font-size: 14px;">
+                    O envía tu comprobante al número: <strong>5544465633</strong>
+                </p>
+            </div>
+            
+            <button type="button" id="btn-finalizar" class="btn">Finalizar</button>
+            
+            <div class="terms">
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+            <div class="progress-step">4</div>
+            <div class="progress-step">5</div>
+            <div class="progress-step">6</div>
+        </div>
+    </div>
+
+    <div id="terms-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background-color: white; padding: 25px; border-radius: 10px; max-width: 90%; max-height: 80%; overflow-y: auto;">
+            <h2 style="color: var(--primary-color); margin-bottom: 15px;">Términos y Condiciones</h2>
+            <div style="margin-bottom: 20px;">
+                <p><strong>1. Reservas y Cancelaciones</strong></p>
+                <p>Para confirmar tu cita, es necesario realizar un pago anticipado equivalente al 30% del valor del servicio seleccionado. Las cancelaciones con menos de 24 horas de anticipación no son reembolsables.</p>
+                
+                <p><strong>2. Política de Descuentos</strong></p>
+                <p>Los descuentos promocionales solo son válidos durante el período establecido y no son acumulables con otras promociones. El descuento del 40% aplica solo para clientes que lleguen a través de redes sociales con el código correspondiente.</p>
+                
+                <p><strong>3. Métodos de Pago</strong></p>
+                <p>Aceptamos transferencias bancarias a la cuenta BBVA proporcionada. Los pagos con tarjeta de crédito o débito deben realizarse directamente en nuestra sucursal.</p>
+                
+                <p><strong>4. Uso de Datos Personales</strong></p>
+                <p>Los datos proporcionados serán utilizados únicamente para el proceso de reserva y no serán compartidos con terceros sin su consentimiento.</p>
+                
+                <p><strong>5. Derechos Reservados</strong></p>
+                <p>© 2025 D FLORENS & COLORS. Todos los derechos reservados. El contenido de esta aplicación es propiedad de D FLORENS & COLORS y no puede ser reproducido sin autorización.</p>
+            </div>
+            <button id="close-terms" class="btn" style="width: 100%;">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => console.log('Service Worker registrado con éxito:', registration))
+                    .catch(err => console.log('Error al registrar el Service Worker:', err));
+            });
+        }
+    </script>
+</body>
+</html>
